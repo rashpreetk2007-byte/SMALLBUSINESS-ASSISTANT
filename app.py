@@ -1058,7 +1058,7 @@ elif page == "👤 My Profile":
                 )
             )
 
-        with col2:
+                with col2:
 
             new_phone = st.text_input(
                 "📱 Phone",
@@ -1128,8 +1128,6 @@ elif page == "👤 My Profile":
             )
 
             st.rerun()
-
-
 # ============================================================
 # 21. INVENTORY
 # ============================================================
