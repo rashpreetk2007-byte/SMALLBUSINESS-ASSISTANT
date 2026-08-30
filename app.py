@@ -996,36 +996,23 @@ if page == "🏠 Dashboard":
 
 elif page == "👤 My Profile":
 
-    st.header(
-        "👤 My Business Profile"
-    )
+    st.header("👤 My Business Profile")
 
     st.caption(
         "Update your personal and business information."
     )
 
     categories = [
-
         "Retail",
-
         "Food",
-
         "Clothing",
-
         "Digital Services",
-
         "Freelancer",
-
         "Tuition",
-
         "Home Business",
-
         "Beauty",
-
         "Handmade",
-
         "Other"
-
     ]
 
     current_category = str(
@@ -1033,18 +1020,12 @@ elif page == "👤 My Profile":
     )
 
     category_index = (
-
         categories.index(current_category)
-
         if current_category in categories
-
         else 0
     )
 
-
-    with st.form(
-        "profile_form"
-    ):
+    with st.form("profile_form"):
 
         col1, col2 = st.columns(2)
 
@@ -1108,12 +1089,10 @@ elif page == "👤 My Profile":
                 )
             )
 
-
         submitted = st.form_submit_button(
             "💾 Save Profile",
             use_container_width=True
         )
-
 
         if submitted:
 
