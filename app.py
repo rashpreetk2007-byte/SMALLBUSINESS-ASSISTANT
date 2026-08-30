@@ -993,7 +993,6 @@ if page == "🏠 Dashboard":
 # ============================================================
 # 20. MY PROFILE
 # ============================================================
-
 elif page == "👤 My Profile":
 
     st.header("👤 My Business Profile")
@@ -1026,23 +1025,18 @@ elif page == "👤 My Profile":
     )
 
     with st.form("profile_form"):
-
         col1, col2 = st.columns(2)
 
         with col1:
 
             new_full_name = st.text_input(
                 "👤 Full Name",
-                value=str(
-                    profile["full_name"] or ""
-                )
+                value=str(profile["full_name"] or "")
             )
 
             new_business_name = st.text_input(
                 "🏪 Business Name",
-                value=str(
-                    profile["business_name"] or ""
-                )
+                value=str(profile["business_name"] or "")
             )
 
             new_category = st.selectbox(
@@ -1053,40 +1047,30 @@ elif page == "👤 My Profile":
 
             new_city = st.text_input(
                 "📍 City",
-                value=str(
-                    profile["city"] or ""
-                )
+                value=str(profile["city"] or "")
             )
 
-                with col2:
+        with col2:
 
             new_phone = st.text_input(
                 "📱 Phone",
-                value=str(
-                    profile["phone"] or ""
-                )
+                value=str(profile["phone"] or "")
             )
 
             new_email = st.text_input(
                 "📧 Email",
-                value=str(
-                    profile["email"] or ""
-                )
+                value=str(profile["email"] or "")
             )
 
             new_budget = st.number_input(
                 "💰 Business Budget ₹",
                 min_value=0.0,
-                value=float(
-                    profile["budget"] or 0
-                )
+                value=float(profile["budget"] or 0)
             )
 
             new_goal = st.text_area(
                 "🎯 Business Goal",
-                value=str(
-                    profile["goal"] or ""
-                )
+                value=str(profile["goal"] or "")
             )
 
         submitted = st.form_submit_button(
@@ -1123,11 +1107,10 @@ elif page == "👤 My Profile":
                 )
             )
 
-            st.success(
-                "✅ Profile updated successfully."
-            )
-
+            st.success("✅ Profile updated successfully.")
             st.rerun()
+
+
 # ============================================================
 # 21. INVENTORY
 # ============================================================
